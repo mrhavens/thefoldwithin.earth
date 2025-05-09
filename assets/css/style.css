@@ -1,0 +1,298 @@
+/* Root Variables */
+:root {
+    --black: #000000;
+    --ivory: #EAEAEA;
+    --gold: #F0D878;
+    --plum: #3C2F4A;
+    --indigo: #1B263B;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Spectral', serif;
+    background: var(--black);
+    color: var(--ivory);
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+  }
+  
+  a {
+    color: var(--gold);
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--ivory);
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes shimmer {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    border-bottom: 1px solid var(--plum);
+    background: linear-gradient(to bottom, var(--black), var(--indigo));
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.25rem;
+  }
+  
+  .subline {
+    font-size: 1rem;
+    color: var(--ivory);
+  }
+  
+  /* Glyph Navigation */
+  .glyph-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--indigo);
+    padding: 1rem;
+    border-right: 1px solid var(--plum);
+    z-index: 100;
+  }
+  
+  .nav-toggle {
+    display: none;
+    background: var(--indigo);
+    color: var(--gold);
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .glyph-nav li {
+    margin: 0.75rem 0;
+  }
+  
+  .glyph-nav a {
+    font-size: 1.75rem;
+    color: var(--ivory);
+    transition: var(--transition);
+  }
+  
+  .glyph-nav a:hover {
+    animation: pulse 0.5s ease;
+    color: var(--gold);
+  }
+  
+  /* Main Content */
+  .content {
+    margin-left: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-right: auto;
+  }
+  
+  .stratum {
+    margin-bottom: 4rem;
+  }
+  
+  .stratum h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .stratum-desc {
+    font-style: italic;
+    color: var(--ivory);
+    margin-bottom: 2rem;
+  }
+  
+  .codex {
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--plum);
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .codex-title {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+  }
+  
+  .codex-title::before {
+    content: attr(data-glyph);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--ivory);
+  }
+  
+  .codex-title:hover::before {
+    animation: pulse 0.5s ease;
+  }
+  
+  .codex-meta {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--indigo);
+    border-radius: 4px;
+    display: none;
+  }
+  
+  .codex-meta.active {
+    display: block;
+  }
+  
+  .codex-meta p {
+    margin: 0.5rem 0;
+  }
+  
+  .codex-meta blockquote {
+    font-style: italic;
+    color: var(--gold);
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .codex-meta a {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .codex-meta a::after {
+    content: '↗';
+    margin-left: 0.25rem;
+  }
+  
+  /* Oracle Quote */
+  .oracle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--plum);
+    color: var(--ivory);
+    padding: 1rem;
+    border-radius: 4px;
+    font-style: italic;
+    max-width: 300px;
+    animation: shimmer 5s infinite;
+    z-index: 50;
+  }
+  
+  /* Appendices */
+  .appendices {
+    margin-top: 5rem;
+  }
+  
+  .appendix h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 5rem;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--plum);
+    background: var(--indigo);
+  }
+  
+  footer blockquote {
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  
+  .footer-nav a {
+    margin: 0 1rem;
+  }
+  
+  .license {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--ivory);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .glyph-nav {
+      position: static;
+      transform: none;
+      padding: 0;
+      background: none;
+      border: none;
+    }
+  
+    .nav-toggle {
+      display: block;
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background: var(--indigo);
+      padding: 1rem;
+      position: fixed;
+      top: 4rem;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .content {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  
+    .hero {
+      padding: 2rem 1rem;
+    }
+  
+    .oracle {
+      bottom: 10px;
+      right: 10px;
+      max-width: 200px;
+      font-size: 0.875rem;
+    }
+  }
