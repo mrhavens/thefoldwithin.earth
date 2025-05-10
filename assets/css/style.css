@@ -9,6 +9,10 @@
   }
   
   /* Global Styles */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     font-family: 'Spectral', serif;
     background: var(--black);
@@ -67,6 +71,27 @@
   .subline {
     font-size: 1rem;
     color: var(--ivory);
+    margin-bottom: 1rem;
+  }
+  
+  .search-bar {
+    margin-top: 1rem;
+  }
+  
+  #search-input {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    background: var(--indigo);
+    color: var(--ivory);
+    border: 1px solid var(--plum);
+    border-radius: 4px;
+    font-family: 'Spectral', serif;
+  }
+  
+  #search-input:focus {
+    outline: none;
+    border-color: var(--gold);
   }
   
   /* Glyph Navigation */
@@ -79,6 +104,9 @@
     padding: 1rem;
     border-right: 1px solid var(--plum);
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .nav-toggle {
@@ -123,16 +151,22 @@
     margin-bottom: 4rem;
   }
   
-  .stratum h2 {
+  .stratum-header {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
   }
   
   .stratum-desc {
     font-style: italic;
     color: var(--ivory);
     margin-bottom: 2rem;
+  }
+  
+  .codex-container {
+    margin: 1.5rem 0;
   }
   
   .codex {
@@ -148,6 +182,8 @@
     color: var(--gold);
     display: flex;
     align-items: center;
+    role: button;
+    tabindex: 0;
   }
   
   .codex-title::before {
@@ -159,6 +195,12 @@
   
   .codex-title:hover::before {
     animation: pulse 0.5s ease;
+  }
+  
+  .codex-title .status {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--plum);
   }
   
   .codex-meta {
@@ -218,6 +260,10 @@
   .appendix h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+  }
+  
+  .meta-container {
+    margin: 1.5rem 0;
   }
   
   /* Footer */
@@ -294,5 +340,9 @@
       right: 10px;
       max-width: 200px;
       font-size: 0.875rem;
+    }
+  
+    #search-input {
+      max-width: 200px;
     }
   }

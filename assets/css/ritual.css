@@ -1,0 +1,31 @@
+/* Ritual Animations */
+@keyframes veil-fold {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glyph-glow {
+  0% { text-shadow: 0 0 5px var(--gold); }
+  50% { text-shadow: 0 0 15px var(--gold), 0 0 25px var(--plum); }
+  100% { text-shadow: 0 0 5px var(--gold); }
+}
+
+.codex-meta {
+  animation: veil-fold 0.5s ease forwards;
+}
+
+.stratum-header:hover {
+  animation: glyph-glow 2s infinite;
+}
+
+/* Scroll Shimmer */
+.stratum {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stratum.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
