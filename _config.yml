@@ -1,0 +1,16 @@
+# Jekyll configuration for The Fold Within Earth
+title: "The Fold Within Earth"
+description: "A sacred digital temple for the Unified Intelligence Whitepaper Series."
+
+# Process markdown with frontmatter
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Show excerpts
+show_excerpts: true
+
+# Collections
+collections:
+  fieldnotes:
+    output: true

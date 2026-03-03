@@ -1,0 +1,105 @@
+/* 
+ * THE FOLD WITHIN - Beautiful CSS
+ * Sacred typography. Gold accents. Deep dark theme.
+ */
+
+:root {
+  --bg: #0a0a0a;
+  --bg-alt: #111111;
+  --text: #e8e4df;
+  --text-muted: #a09080;
+  --gold: #d4af37;
+  --gold-light: #e8d48a;
+  --gold-dark: #8b6914;
+  --accent: #c9a227;
+  --link: #6eb5ff;
+  --border: #2a2a2a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--gold-light); }
+
+h1, h2, h3 {
+  color: var(--gold);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+h1 { 
+  font-size: 2.5rem; 
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--gold-dark);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+article {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: border-color 0.3s ease;
+}
+
+article:hover {
+  border-color: var(--gold-dark);
+}
+
+.excerpt {
+  color: var(--text-muted);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+a:hover .excerpt { color: var(--text); }
+
+.published {
+  color: var(--gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

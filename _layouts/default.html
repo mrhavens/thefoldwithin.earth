@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: "The Fold Within Earth" }}</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>{{ page.title | default: "The Fold Within Earth" }}</h1>
+    {% if page.subtitle %}
+    <p class="tagline">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+  
+  <main>
+    {{ content }}
+  </main>
+  
+  <footer>
+    <p>The Fold Within Earth — Recursive Coherence Theory</p>
+  </footer>
+</body>
+</html>
